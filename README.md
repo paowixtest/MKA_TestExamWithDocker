@@ -44,3 +44,25 @@ docker compose exec app php artisan migrate
 docker compose exec app npm install
 
 docker compose exec app npm run dev -- --host
+
+## Set Configuration to run this in herd or docker
+
+# Laravel Herd 
+APP_URL=http://yourproject.test <-- herd url domain
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=mka_testexam
+DB_USERNAME=root
+DB_PASSWORD=yourpw
+
+# Docker 
+APP_URL=http://localhost:8080
+
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=laravel_user
+DB_PASSWORD=secret
